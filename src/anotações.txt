@@ -1,0 +1,33 @@
+PROGRAMÇÃO FUNCIONAL EM JAVA ATÉ A VERSAO 7
+
+Sempre foi possível de utlizar a programação funcional em JAVA 7, porém verbosamente. Gerando codigo boilerplate.
+
+EX:
+
+List<Familia> familias = Arrays.asList(
+    new Familia("Stark", "Winterfel"),
+    new Familia("Lanninster", "Lanisporto"),
+    new Familia("Targaryen", "Pedra do Dragao")
+);
+
+Collections.sort(familias, new Comparator<Familia>(){
+    public int comapre(Familia f1, Familia f2){
+        return f1.getNome().compareTo(f2.getNome());
+    }
+});
+
+-------------------------------------------------
+
+JAVA 8 COM LAMBDAS
+
+List<Familia> familias = Arrays.asList(
+    new Familia("Stark", "Winterfel"),
+    new Familia("Lanninster", "Lanisporto"),
+    new Familia("Targaryen", "Pedra do Dragao")
+);
+
+Collections.sort(familias, (f1, f2) -> f1.getNome().compareTo(f2.getNome()));
+
+-------------------------------------------------
+
+PROGRAMAÇÃO FUNCIONAL = LAMBDA + STREAM
